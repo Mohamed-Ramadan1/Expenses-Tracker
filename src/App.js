@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import ShowExpenses from './components/ShowExpensesItems';
+import ShowExpenses from './components/Expenses/ShowExpensesItems';
 
-import ExpenseItem from './components/ExpenseItem'
+import ExpenseItem from './components/Expenses/ExpenseItem'
 
 
 
