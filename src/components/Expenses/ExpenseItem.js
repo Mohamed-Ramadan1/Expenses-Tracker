@@ -4,7 +4,7 @@ import "./ExpenseItem.css";
 
 
 function ExpenseItem(props) {
-    
+
     function changeTitle(){
         props.title="Titlc changed on clik"
     }
