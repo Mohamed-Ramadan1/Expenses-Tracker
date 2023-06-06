@@ -24,11 +24,8 @@ const App = () => {
   ];
   return (
     <div className="App">
-
+      
       <Expenses items={expenses} />
-
-    
-  
 
     </div>
   );
