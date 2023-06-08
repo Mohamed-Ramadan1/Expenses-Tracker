@@ -8,18 +8,22 @@ const NewExpens = (props) => {
     const saveDataHandler = (passedValues) => {
         const enterdData = {
             ...passedValues,
-            id:Math.random().toString()
+            id: Math.random().toString()
         }
-        props.onAddExpense(enterdData)
-    }
+        props.onAddExpense(enterdData);
+        setIsDeting(false)
+    };
     const startEditingHandler = () => {
         setIsDeting(true);
     }
 
+    const stopEditing = () => {
+        setIsDeting(false)
+    }
     return (
         <div className='new-expense'>
             {!isEditing && <button onClick={startEditingHandler}>Add New Expense</button>}
-            {isEditing && <ExpenseForm onSaveExpenseData={saveDataHandler} />}
+            {isEditing && <ExpenseForm onSaveExpenseData={saveDataHandler} onCancle={stopEditing} />}
         </div>
     )
 }
